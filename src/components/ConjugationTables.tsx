@@ -51,7 +51,7 @@ const TENSE_GROUPS = {
 
 type TenseGroup = keyof typeof TENSE_GROUPS;
 
-interface ConjugationData {
+export interface ConjugationData {
   definition: string;
   yo: string;
   tú: string;

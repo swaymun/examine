@@ -1,7 +1,6 @@
 'use client';
 
 import { MantineProvider, createTheme } from '@mantine/core';
-import { useLocalStorage } from '@mantine/hooks';
 
 const theme = createTheme({
   /** Put your mantine theme override here */

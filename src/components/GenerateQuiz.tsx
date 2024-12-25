@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Combobox, Button, LoadingOverlay, Container, TextInput, Paper, Group, Checkbox, Grid } from '@mantine/core';
 import { IconArrowsShuffle } from '@tabler/icons-react';
-import { ConjugationTables } from './ConjugationTables';
+import { ConjugationData, ConjugationTables } from './ConjugationTables';
 
 interface GenerateQuizProps {
   verbs: string[];
@@ -19,7 +19,7 @@ const TENSE_GROUPS = {
 export function GenerateQuiz({ verbs }: GenerateQuizProps) {
   const [value, setValue] = useState('');
   const [loading, setLoading] = useState(false);
-  const [conjugations, setConjugations] = useState<Record<string, object> | null>(null);
+  const [conjugations, setConjugations] = useState<Record<string, ConjugationData> | null>(null);
   const [enabledTenseGroups, setEnabledTenseGroups] = useState({
     basic: true,
     perfect: false,
